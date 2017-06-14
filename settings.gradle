@@ -1,0 +1,21 @@
+gradle.ext.compileSdkVersion = 25
+gradle.ext.buildToolsVersion = "25.0.3"
+gradle.ext.minSdkVersion = 15
+gradle.ext.targetSdkVersion = 22
+
+String jackchengPath = rootDir.absolutePath + '/../cygmodule'
+String modulesPath = jackchengPath + '/modules'
+
+include ':GreenDao'
+project(':GreenDao').projectDir = new File(modulesPath + '/GreenDao')
+
+include ':CygHttp'
+project(':CygHttp').projectDir = new File(modulesPath + '/CygHttp')
+
+include ':CygWidget'
+project(':CygWidget').projectDir = new File(modulesPath + '/CygWidget')
+
+include ':CygPtr'
+project(':CygPtr').projectDir = new File(modulesPath + '/CygPtr')
+
+include ':app'
