@@ -9,10 +9,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/../jackcheng/modules/CygHttp" />
-            <option value="$PROJECT_DIR$/../jackcheng/modules/CygPtr" />
-            <option value="$PROJECT_DIR$/../jackcheng/modules/CygWidget" />
-            <option value="$PROJECT_DIR$/../jackcheng/modules/GreenDao" />
+            <option value="$PROJECT_DIR$/../cygmodule/modules/CygHttp" />
+            <option value="$PROJECT_DIR$/../cygmodule/modules/CygPtr" />
+            <option value="$PROJECT_DIR$/../cygmodule/modules/CygWidget" />
+            <option value="$PROJECT_DIR$/../cygmodule/modules/GreenDao" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

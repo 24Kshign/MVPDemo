@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../jackcheng/modules/CygHttp/CygHttp.iml" filepath="$PROJECT_DIR$/../jackcheng/modules/CygHttp/CygHttp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../jackcheng/modules/CygPtr/CygPtr.iml" filepath="$PROJECT_DIR$/../jackcheng/modules/CygPtr/CygPtr.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../jackcheng/modules/CygWidget/CygWidget.iml" filepath="$PROJECT_DIR$/../jackcheng/modules/CygWidget/CygWidget.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../jackcheng/modules/GreenDao/GreenDao.iml" filepath="$PROJECT_DIR$/../jackcheng/modules/GreenDao/GreenDao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cygmodule/modules/CygHttp/CygHttp.iml" filepath="$PROJECT_DIR$/../cygmodule/modules/CygHttp/CygHttp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cygmodule/modules/CygPtr/CygPtr.iml" filepath="$PROJECT_DIR$/../cygmodule/modules/CygPtr/CygPtr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cygmodule/modules/CygWidget/CygWidget.iml" filepath="$PROJECT_DIR$/../cygmodule/modules/CygWidget/CygWidget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cygmodule/modules/GreenDao/GreenDao.iml" filepath="$PROJECT_DIR$/../cygmodule/modules/GreenDao/GreenDao.iml" />
       <module fileurl="file://$PROJECT_DIR$/MVPMasterDemo.iml" filepath="$PROJECT_DIR$/MVPMasterDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
