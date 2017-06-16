@@ -30,6 +30,7 @@ public class BaseModel extends BaseRetrofit {
     protected Map<String, String> getCommonMap() {
         Map<String, String> commonMap = new HashMap<>();
         commonMap.put("user_id", String.valueOf(UserDao.getInstance().getUserId()));
+        commonMap.put("token", String.valueOf(UserDao.getInstance().getToken()));
         return commonMap;
     }
 
