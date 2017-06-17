@@ -1,6 +1,5 @@
 package cn.share.jack.mvpmasterdemo.ui.login;
 
-import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
 import android.text.TextUtils;
 
@@ -9,7 +8,6 @@ import butterknife.OnClick;
 import cn.share.jack.mvpmasterdemo.R;
 import cn.share.jack.mvpmasterdemo.presenter.login.LoginPresenter;
 import cn.share.jack.mvpmasterdemo.ui.BaseActivity;
-import cn.share.jack.mvpmasterdemo.ui.main.MainActivity;
 
 /**
  * Created by jack on 2017/6/13
@@ -39,8 +37,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
 
     @Override
     public void loginSuccess() {
-        startActivity(new Intent(this, MainActivity.class));
-        finish();
+        mPresenter.toMainActivity(this);
     }
 
     @Override

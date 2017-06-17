@@ -11,4 +11,5 @@ public interface LoginView {
     String getUserName();
 
     String getPassword();
+
 }
