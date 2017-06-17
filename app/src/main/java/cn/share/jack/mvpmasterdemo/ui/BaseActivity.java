@@ -1,6 +1,6 @@
 package cn.share.jack.mvpmasterdemo.ui;
 
-import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
@@ -37,7 +37,7 @@ public abstract class BaseActivity<PRESENTER extends BasePresenter> extends Frag
 
     protected abstract int layoutRes();
 
-    protected PRESENTER createPresenter(){
+    protected PRESENTER createPresenter() {
         return null;
     }
 
@@ -63,7 +63,7 @@ public abstract class BaseActivity<PRESENTER extends BasePresenter> extends Frag
     }
 
     @Override
-    public Activity getActivity() {
+    public Context getContext() {
         return this;
     }
 }

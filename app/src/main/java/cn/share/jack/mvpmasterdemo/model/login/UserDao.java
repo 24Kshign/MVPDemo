@@ -3,6 +3,8 @@ package cn.share.jack.mvpmasterdemo.model.login;
 import com.share.jack.greendao.BaseGreenDao;
 import com.share.jack.greendao.bean.UserInfo;
 
+import java.util.List;
+
 /**
  * Created by jack on 2017/6/13
  */
@@ -31,7 +33,11 @@ public class UserDao extends BaseGreenDao<UserInfo> {
     }
 
     public UserInfo getUserInfo() {
-        return queryById(0, UserInfo.class);
+        List<UserInfo> userInfoList = queryAll(UserInfo.class);
+        if (null != userInfoList && userInfoList.size() > 0) {
+            return userInfoList.get(0);
+        }
+        return null;
     }
 
     public long getUserId() {
