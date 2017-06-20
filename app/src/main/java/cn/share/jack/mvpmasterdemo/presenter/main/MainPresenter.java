@@ -13,9 +13,9 @@ import cn.share.jack.mvpmasterdemo.ui.main.MainView;
  * Created by jack on 2017/6/14
  */
 
-public class MainPresenter extends BasePresenter<MainView> {
+public class MainPresenter extends BasePresenter<MainView<List<MainInfo>>> {
 
-    public MainPresenter(MainView mainView) {
+    public MainPresenter(MainView<List<MainInfo>> mainView) {
         attachView(mainView);
     }
 
@@ -23,7 +23,7 @@ public class MainPresenter extends BasePresenter<MainView> {
         MainModel.getInstance().execute(new CygBaseObserver<List<MainInfo>>(baseImpl) {
             @Override
             protected void onBaseNext(List<MainInfo> data) {
-                mView.getArticleDataSuccess(data);
+                mView.onRequestSuccessData(data);
             }
 
             @Override

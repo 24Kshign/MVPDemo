@@ -8,6 +8,4 @@ public interface BaseRequestContract<T> {
 
     void onRequestSuccessData(T data);
 
-    void onRequestFailureData(Throwable t);
-
 }

@@ -19,7 +19,7 @@ import cn.share.jack.mvpmasterdemo.base.BaseActivity;
 import cn.share.jack.mvpmasterdemo.ui.main.adapter.MainAdapter;
 import cn.share.jack.mvpmasterdemo.ui.main.adapter.MainViewHolder;
 
-public class MainActivity extends BaseActivity<MainPresenter> implements MainView, CygBaseRecyclerAdapter.OnItemClickListener<MainViewHolder> {
+public class MainActivity extends BaseActivity<MainPresenter> implements MainView<List<MainInfo>>, CygBaseRecyclerAdapter.OnItemClickListener<MainViewHolder> {
 
     @BindView(R.id.am_titlebar)
     TitleBarUIComponent titleBarUIComponent;
@@ -71,12 +71,6 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainVie
     }
 
     @Override
-    public void getArticleDataSuccess(List<MainInfo> data) {
-        mAdapter.setDataList(data);
-        runOnMainThread();
-    }
-
-    @Override
     public void getArticleDataFailure(Throwable t) {
         runOnMainThread();
     }
@@ -84,5 +78,11 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainVie
     @Override
     public void onItemClick(int position) {
         Toast.makeText(this, "点击了第" + (position + 1) + "个Item", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onRequestSuccessData(List<MainInfo> data) {
+        mAdapter.setDataList(data);
+        runOnMainThread();
     }
 }

@@ -69,9 +69,4 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     public void onRequestSuccessData(User data) {
         mPresenter.toMainActivity(this);
     }
-
-    @Override
-    public void onRequestFailureData(Throwable t) {
-
-    }
 }
