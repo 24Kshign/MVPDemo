@@ -26,16 +26,16 @@ public class LoginPresenter extends BasePresenter<LoginView<User>> {
 
 
     public void getUserInfo(BaseImpl baseImpl) {
-        LoginModel.getInstance().execute(mView.getUserName(), mView.getPassword(), new CygBaseObserver<User>(baseImpl, "正在登录") {
+        LoginModel.getInstance().execute(getView().getUserName(), getView().getPassword(), new CygBaseObserver<User>(baseImpl, "正在登录") {
             @Override
             protected void onBaseNext(User data) {
                 UserInfo userInfo = new UserInfo();
                 userInfo.setId(data.getId());
-                userInfo.setUsername(mView.getUserName());
+                userInfo.setUsername(getView().getUserName());
                 userInfo.setToken(data.getToken());
                 UserDao.getInstance().deleteAll(UserInfo.class);
                 UserDao.getInstance().insertObject(userInfo);
-                mView.onRequestSuccessData(data);
+                getView().onRequestSuccessData(data);
             }
         });
     }

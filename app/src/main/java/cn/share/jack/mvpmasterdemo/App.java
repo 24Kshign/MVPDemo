@@ -12,6 +12,6 @@ public class App extends CygApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        HttpServletAddress.getInstance().setOfflineAddress("http://192.168.2.200:8080/FriendCircle/");
+        HttpServletAddress.getInstance().setOfflineAddress("http://192.168.2.78:8080/FriendCircle/");
     }
 }

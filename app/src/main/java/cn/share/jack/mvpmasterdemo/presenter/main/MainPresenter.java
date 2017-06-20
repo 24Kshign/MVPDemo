@@ -23,13 +23,13 @@ public class MainPresenter extends BasePresenter<MainView<List<MainInfo>>> {
         MainModel.getInstance().execute(new CygBaseObserver<List<MainInfo>>(baseImpl) {
             @Override
             protected void onBaseNext(List<MainInfo> data) {
-                mView.onRequestSuccessData(data);
+                getView().onRequestSuccessData(data);
             }
 
             @Override
             protected void onBaseError(Throwable t) {
                 super.onBaseError(t);
-                mView.getArticleDataFailure(t);
+                getView().getArticleDataFailure(t);
             }
         });
     }

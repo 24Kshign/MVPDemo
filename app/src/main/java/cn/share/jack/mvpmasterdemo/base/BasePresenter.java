@@ -1,18 +1,31 @@
 package cn.share.jack.mvpmasterdemo.base;
 
+import java.lang.ref.WeakReference;
+
 /**
  * Created by jack on 2017/6/13
  */
 
-public class BasePresenter<VIEW>{
+public class BasePresenter<VIEW> {
 
-    protected VIEW mView;
+    private WeakReference<VIEW> mViews;
 
-    public void attachView(VIEW view) {
-        this.mView = view;
+    protected void attachView(VIEW view) {
+        mViews = new WeakReference<VIEW>(view);
     }
 
-    public void detachView() {
-        this.mView = null;
+    protected VIEW getView() {
+        return isViewAttached() ? mViews.get() : null;
+    }
+
+    protected boolean isViewAttached() {
+        return null != mViews && null != mViews.get();
+    }
+
+    protected void detachView() {
+        if (null != mViews) {
+            mViews.clear();
+            mViews = null;
+        }
     }
 }
