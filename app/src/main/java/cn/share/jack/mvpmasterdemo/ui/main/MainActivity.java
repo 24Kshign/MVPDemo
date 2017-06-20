@@ -15,7 +15,7 @@ import cn.share.jack.cygwidget.titlebar.TitleBarUIComponent;
 import cn.share.jack.mvpmasterdemo.R;
 import cn.share.jack.mvpmasterdemo.model.main.MainInfo;
 import cn.share.jack.mvpmasterdemo.presenter.main.MainPresenter;
-import cn.share.jack.mvpmasterdemo.ui.BaseActivity;
+import cn.share.jack.mvpmasterdemo.base.BaseActivity;
 import cn.share.jack.mvpmasterdemo.ui.main.adapter.MainAdapter;
 import cn.share.jack.mvpmasterdemo.ui.main.adapter.MainViewHolder;
 

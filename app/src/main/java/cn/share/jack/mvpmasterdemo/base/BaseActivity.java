@@ -1,4 +1,4 @@
-package cn.share.jack.mvpmasterdemo.ui;
+package cn.share.jack.mvpmasterdemo.base;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentActivity;
 
 import butterknife.ButterKnife;
 import cn.share.jack.cyghttp.callback.BaseImpl;
-import cn.share.jack.mvpmasterdemo.presenter.BasePresenter;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 

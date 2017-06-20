@@ -1,4 +1,4 @@
-package cn.share.jack.mvpmasterdemo.presenter;
+package cn.share.jack.mvpmasterdemo.base;
 
 /**
  * Created by jack on 2017/6/13

@@ -3,6 +3,7 @@ package cn.share.jack.mvpmasterdemo.ui;
 import android.content.Intent;
 
 import cn.share.jack.mvpmasterdemo.R;
+import cn.share.jack.mvpmasterdemo.base.BaseActivity;
 import cn.share.jack.mvpmasterdemo.model.login.UserDao;
 import cn.share.jack.mvpmasterdemo.ui.login.LoginActivity;
 import cn.share.jack.mvpmasterdemo.ui.main.MainActivity;

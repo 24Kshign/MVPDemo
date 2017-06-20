@@ -6,7 +6,7 @@ import cn.share.jack.cyghttp.callback.BaseImpl;
 import cn.share.jack.cyghttp.callback.CygBaseObserver;
 import cn.share.jack.mvpmasterdemo.model.main.MainInfo;
 import cn.share.jack.mvpmasterdemo.model.main.MainModel;
-import cn.share.jack.mvpmasterdemo.presenter.BasePresenter;
+import cn.share.jack.mvpmasterdemo.base.BasePresenter;
 import cn.share.jack.mvpmasterdemo.ui.main.MainView;
 
 /**

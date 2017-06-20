@@ -1,4 +1,4 @@
-package cn.share.jack.mvpmasterdemo.ui;
+package cn.share.jack.mvpmasterdemo.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,8 +7,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import cn.share.jack.mvpmasterdemo.presenter.BasePresenter;
 
 /**
  * Created by jack on 2017/6/14

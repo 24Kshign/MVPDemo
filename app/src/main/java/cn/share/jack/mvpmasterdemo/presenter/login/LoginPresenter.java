@@ -10,7 +10,7 @@ import cn.share.jack.cyghttp.callback.CygBaseObserver;
 import cn.share.jack.mvpmasterdemo.model.login.LoginModel;
 import cn.share.jack.mvpmasterdemo.model.login.User;
 import cn.share.jack.mvpmasterdemo.model.login.UserDao;
-import cn.share.jack.mvpmasterdemo.presenter.BasePresenter;
+import cn.share.jack.mvpmasterdemo.base.BasePresenter;
 import cn.share.jack.mvpmasterdemo.ui.login.LoginView;
 import cn.share.jack.mvpmasterdemo.ui.main.MainActivity;
 
@@ -18,11 +18,12 @@ import cn.share.jack.mvpmasterdemo.ui.main.MainActivity;
  * Created by jack on 2017/6/13
  */
 
-public class LoginPresenter extends BasePresenter<LoginView> {
+public class LoginPresenter extends BasePresenter<LoginView<User>> {
 
-    public LoginPresenter(LoginView loginView) {
+    public LoginPresenter(LoginView<User> loginView) {
         attachView(loginView);
     }
+
 
     public void getUserInfo(BaseImpl baseImpl) {
         LoginModel.getInstance().execute(mView.getUserName(), mView.getPassword(), new CygBaseObserver<User>(baseImpl, "正在登录") {
@@ -34,7 +35,7 @@ public class LoginPresenter extends BasePresenter<LoginView> {
                 userInfo.setToken(data.getToken());
                 UserDao.getInstance().deleteAll(UserInfo.class);
                 UserDao.getInstance().insertObject(userInfo);
-                mView.loginSuccess();
+                mView.onRequestSuccessData(data);
             }
         });
     }

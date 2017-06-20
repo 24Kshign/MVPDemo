@@ -1,7 +1,7 @@
 package cn.share.jack.mvpmasterdemo.model.login;
 
 import cn.share.jack.cyghttp.HttpFunction;
-import cn.share.jack.mvpmasterdemo.model.BaseModel;
+import cn.share.jack.mvpmasterdemo.base.BaseModel;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 

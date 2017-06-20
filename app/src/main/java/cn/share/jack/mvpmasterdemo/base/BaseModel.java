@@ -1,4 +1,4 @@
-package cn.share.jack.mvpmasterdemo.model;
+package cn.share.jack.mvpmasterdemo.base;
 
 import android.text.TextUtils;
 import android.util.Log;
@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import cn.share.jack.cyghttp.BaseRetrofit;
+import cn.share.jack.mvpmasterdemo.model.CygApi;
 import cn.share.jack.mvpmasterdemo.model.login.UserDao;
 
 /**

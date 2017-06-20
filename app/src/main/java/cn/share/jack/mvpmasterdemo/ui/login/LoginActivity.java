@@ -6,14 +6,15 @@ import android.text.TextUtils;
 import butterknife.BindView;
 import butterknife.OnClick;
 import cn.share.jack.mvpmasterdemo.R;
+import cn.share.jack.mvpmasterdemo.base.BaseActivity;
+import cn.share.jack.mvpmasterdemo.model.login.User;
 import cn.share.jack.mvpmasterdemo.presenter.login.LoginPresenter;
-import cn.share.jack.mvpmasterdemo.ui.BaseActivity;
 
 /**
  * Created by jack on 2017/6/13
  */
 
-public class LoginActivity extends BaseActivity<LoginPresenter> implements LoginView {
+public class LoginActivity extends BaseActivity<LoginPresenter> implements LoginView<User> {
 
     @BindView(R.id.al_et_user_name)
     TextInputEditText alEtUserName;
@@ -33,11 +34,6 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     @Override
     protected void initView() {
 
-    }
-
-    @Override
-    public void loginSuccess() {
-        mPresenter.toMainActivity(this);
     }
 
     @Override
@@ -67,5 +63,15 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     public void onBackPressed() {
         super.onBackPressed();
         moveTaskToBack(true);
+    }
+
+    @Override
+    public void onRequestSuccessData(User data) {
+        mPresenter.toMainActivity(this);
+    }
+
+    @Override
+    public void onRequestFailureData(Throwable t) {
+
     }
 }
