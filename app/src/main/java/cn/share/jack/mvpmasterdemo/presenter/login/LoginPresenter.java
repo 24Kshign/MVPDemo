@@ -1,16 +1,16 @@
 package cn.share.jack.mvpmasterdemo.presenter.login;
 
-import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 
 import com.share.jack.greendao.bean.UserInfo;
 
 import cn.share.jack.cyghttp.callback.BaseImpl;
 import cn.share.jack.cyghttp.callback.CygBaseObserver;
+import cn.share.jack.mvpmasterdemo.base.BasePresenter;
 import cn.share.jack.mvpmasterdemo.model.login.LoginModel;
 import cn.share.jack.mvpmasterdemo.model.login.User;
 import cn.share.jack.mvpmasterdemo.model.login.UserDao;
-import cn.share.jack.mvpmasterdemo.base.BasePresenter;
 import cn.share.jack.mvpmasterdemo.ui.login.LoginView;
 import cn.share.jack.mvpmasterdemo.ui.main.MainActivity;
 
@@ -40,7 +40,7 @@ public class LoginPresenter extends BasePresenter<LoginView<User>> {
         });
     }
 
-    public void toMainActivity(Activity activity) {
-        activity.startActivity(new Intent(activity, MainActivity.class));
+    public void toMainActivity(Context context) {
+        context.startActivity(new Intent(context, MainActivity.class));
     }
 }
