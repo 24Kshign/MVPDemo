@@ -24,7 +24,6 @@ public class LoginPresenter extends BasePresenter<LoginView<User>> {
         attachView(loginView);
     }
 
-
     public void getUserInfo(BaseImpl baseImpl) {
         LoginModel.getInstance().execute(getView().getUserName(), getView().getPassword(), new CygBaseObserver<User>(baseImpl, "正在登录") {
             @Override
