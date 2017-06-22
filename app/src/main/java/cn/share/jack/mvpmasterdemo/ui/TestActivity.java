@@ -10,7 +10,7 @@ import cn.share.jack.mvpmasterdemo.base.BaseActivity;
 public class TestActivity extends BaseActivity {
     @Override
     protected int layoutRes() {
-        return R.layout.activity_splash;
+        return R.layout.activity_test;
     }
 
     @Override
