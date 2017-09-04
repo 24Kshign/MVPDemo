@@ -2,6 +2,7 @@ package cn.share.jack.mvpmasterdemo.ui.main;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.KeyEvent;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
@@ -13,9 +14,9 @@ import cn.share.jack.cygwidget.recyclerview.divider.RecyclerViewDivider;
 import cn.share.jack.cygwidget.refersh.OnPullToRefreshListener;
 import cn.share.jack.cygwidget.titlebar.TitleBarUIComponent;
 import cn.share.jack.mvpmasterdemo.R;
+import cn.share.jack.mvpmasterdemo.base.BaseActivity;
 import cn.share.jack.mvpmasterdemo.model.main.MainInfo;
 import cn.share.jack.mvpmasterdemo.presenter.main.MainPresenter;
-import cn.share.jack.mvpmasterdemo.base.BaseActivity;
 import cn.share.jack.mvpmasterdemo.ui.main.adapter.MainAdapter;
 import cn.share.jack.mvpmasterdemo.ui.main.adapter.MainViewHolder;
 
@@ -23,6 +24,8 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainVie
 
     @BindView(R.id.am_titlebar)
     TitleBarUIComponent titleBarUIComponent;
+    @BindView(R.id.am_tv_text)
+    TextView amTvText;
     @BindView(R.id.am_ptr_framelayout)
     PtrRecyclerViewUIComponent ptrRecyclerViewUIComponent;
     private MainAdapter mAdapter;
@@ -61,18 +64,9 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainVie
         return super.onKeyDown(keyCode, event);
     }
 
-    private void runOnMainThread() {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                ptrRecyclerViewUIComponent.refreshComplete();
-            }
-        });
-    }
-
     @Override
     public void getArticleDataFailure(Throwable t) {
-        runOnMainThread();
+        ptrRecyclerViewUIComponent.refreshComplete();
     }
 
     @Override
@@ -83,6 +77,6 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainVie
     @Override
     public void onRequestSuccessData(List<MainInfo> data) {
         mAdapter.setDataList(data);
-        runOnMainThread();
+        ptrRecyclerViewUIComponent.refreshComplete();
     }
 }

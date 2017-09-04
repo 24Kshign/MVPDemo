@@ -29,6 +29,8 @@ public abstract class BaseActivity<PRESENTER extends BasePresenter> extends Frag
         if (null == mPresenter) {
             mPresenter = createPresenter();
         }
+        if (layoutRes() < 0) {
+        }
         setContentView(layoutRes());
         ButterKnife.bind(this);
         initView();

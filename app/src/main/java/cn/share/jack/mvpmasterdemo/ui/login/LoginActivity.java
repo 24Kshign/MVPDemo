@@ -57,7 +57,6 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
             return;
         }
         mPresenter.getUserInfo(this);
-//        startActivity(new Intent(this, TestActivity.class));
     }
 
     @Override
