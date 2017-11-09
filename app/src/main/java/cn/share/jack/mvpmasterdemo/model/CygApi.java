@@ -13,6 +13,8 @@ import retrofit2.http.POST;
 
 /**
  * Created by jack on 2017/6/13
+ *
+ * @author jack
  */
 
 public interface CygApi {

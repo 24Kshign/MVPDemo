@@ -10,6 +10,8 @@ import cn.share.jack.mvpmasterdemo.model.main.MainInfo;
 
 /**
  * Created by jack on 2017/6/14
+ *
+ * @author jack
  */
 
 public class MainAdapter extends CygBaseRecyclerAdapter<MainInfo, MainViewHolder> {

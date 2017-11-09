@@ -5,15 +5,16 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-
 import cn.share.jack.cygwidget.recyclerview.adapter.CygBaseRecyclerViewHolder;
+import cn.share.jack.cygwidget.utils.CygImageLoader;
 import cn.share.jack.mvpmasterdemo.R;
 import cn.share.jack.mvpmasterdemo.model.main.MainInfo;
 
 
 /**
  * Created by jack on 2017/6/14
+ *
+ * @author jack
  */
 
 public class MainViewHolder extends CygBaseRecyclerViewHolder<MainInfo> {
@@ -32,9 +33,7 @@ public class MainViewHolder extends CygBaseRecyclerViewHolder<MainInfo> {
     @Override
     protected void onItemDataUpdated(@Nullable MainInfo mainInfo) {
         if (null != mainInfo) {
-            Glide.with(getContext()).load(String.valueOf(mainInfo.getArticlePic()))
-                    .placeholder(R.mipmap.ic_launcher_round)
-                    .error(R.mipmap.ic_launcher_round).into(ivAvatar);
+            CygImageLoader.loadImage(mainInfo.getArticlePic(), ivAvatar);
             tvTitle.setText(String.valueOf(mainInfo.getArticleTitle()));
             tvContent.setText(String.valueOf(mainInfo.getArticleContent()));
         }

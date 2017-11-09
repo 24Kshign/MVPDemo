@@ -2,7 +2,6 @@ package cn.share.jack.mvpmasterdemo.ui.main;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.KeyEvent;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
@@ -20,12 +19,13 @@ import cn.share.jack.mvpmasterdemo.presenter.main.MainPresenter;
 import cn.share.jack.mvpmasterdemo.ui.main.adapter.MainAdapter;
 import cn.share.jack.mvpmasterdemo.ui.main.adapter.MainViewHolder;
 
+/**
+ * @author jack
+ */
 public class MainActivity extends BaseActivity<MainPresenter> implements MainView<List<MainInfo>>, CygBaseRecyclerAdapter.OnItemClickListener<MainViewHolder> {
 
     @BindView(R.id.am_titlebar)
     TitleBarUIComponent titleBarUIComponent;
-    @BindView(R.id.am_tv_text)
-    TextView amTvText;
     @BindView(R.id.am_ptr_framelayout)
     PtrRecyclerViewUIComponent ptrRecyclerViewUIComponent;
     private MainAdapter mAdapter;

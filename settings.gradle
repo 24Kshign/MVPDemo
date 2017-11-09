@@ -1,5 +1,4 @@
 gradle.ext.compileSdkVersion = 25
-gradle.ext.buildToolsVersion = "25.0.3"
 gradle.ext.minSdkVersion = 15
 gradle.ext.targetSdkVersion = 22
 

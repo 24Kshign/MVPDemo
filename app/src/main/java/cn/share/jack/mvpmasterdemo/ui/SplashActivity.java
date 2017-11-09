@@ -10,6 +10,7 @@ import cn.share.jack.mvpmasterdemo.ui.main.MainActivity;
 
 /**
  * Created by jack on 2017/6/14
+ * @author jack
  */
 
 public class SplashActivity extends BaseActivity {
@@ -26,5 +27,6 @@ public class SplashActivity extends BaseActivity {
         } else {
             startActivity(new Intent(this, LoginActivity.class));
         }
+        finish();
     }
 }
