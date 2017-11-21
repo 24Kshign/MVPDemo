@@ -1,6 +1,7 @@
 gradle.ext.compileSdkVersion = 25
 gradle.ext.minSdkVersion = 15
-gradle.ext.targetSdkVersion = 22
+gradle.ext.targetSdkVersion = 25
+gradle.ext.buildToolsVersion = "25.0.3"
 
 String jackchengPath = rootDir.absolutePath + '/../cygmodule'
 String modulesPath = jackchengPath + '/modules'
